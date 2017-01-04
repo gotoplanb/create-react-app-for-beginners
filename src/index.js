@@ -1,3 +1,7 @@
-// let's go
+import React from 'react';
+import { render } from 'react-dom';
 
-console.log("let's go");
+import StorePicker from './components/StorePicker';
+
+
+render(<StorePicker/>, document.querySelector('#main'));
