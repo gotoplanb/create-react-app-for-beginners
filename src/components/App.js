@@ -8,11 +8,22 @@ class App extends React.Component {
 
   constructor() {
     super();
-    // getInitialState
+    this.addFish = this.addFish.bind(this);
+    // Set initial state
     this.state = {
       fishes: {},
       order: {}
     };
+  }
+
+  addFish(fish) {
+    // First copy your state
+    const fishes = {...this.state.fishes};
+    // Next add in the new fish
+    const timestamp = Date.now();
+    fishes[`fish-${timestamp}`] = fish;
+    // Finally update your state
+    this.setState({ fishes });
   }
 
   render() {
