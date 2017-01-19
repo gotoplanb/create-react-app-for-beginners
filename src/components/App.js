@@ -12,6 +12,7 @@ class App extends React.Component {
     super();
     this.addFish = this.addFish.bind(this);
     this.loadSamples = this.loadSamples.bind(this);
+    this.addToOrder = this.addToOrder.bind(this);
     // Set initial state
     this.state = {
       fishes: {},
@@ -33,6 +34,15 @@ class App extends React.Component {
     this.setState({
       fishes: sampleFishes
     });
+  }
+
+  addToOrder(key) {
+    // First copy your state
+    const order = {...this.state.order};
+    // Increment an existing order item or set to 1
+    order[key] = order[key] + 1 || 1;
+    // Update state
+    this.setState({ order });
   }
 
   render() {
