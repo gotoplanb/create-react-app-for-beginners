@@ -20,6 +20,7 @@ class Inventory extends React.Component {
 
   renderInventory(key) {
     const fish = this.props.fishes[key];
+    // Input values are not updated dynamically. Currently only updated when the component mounts.
     return (
       <div className="fish-edit" key={key}>
         <input type="text" name="name" defaultValue={fish.name} onChange={(e) => this.handleChange(e, key)} />
