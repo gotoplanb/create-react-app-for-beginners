@@ -21,6 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
+    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css",
     "watch": "concurrently --names 'webpack, stylus' --prefix name 'yarn run start' 'yarn run styles:watch'"
   },
   "eslintConfig": {
