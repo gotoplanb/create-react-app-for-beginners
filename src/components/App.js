@@ -8,14 +8,10 @@ import base from '../base';
 
 class App extends React.Component {
 
-  constructor() {
-    super();
-    // Set initial state
-    this.state = {
-      fishes: {},
-      order: {}
-    };
-  }
+  state = {
+    fishes: {},
+    order: {}
+  };
 
   componentWillMount() {
 
