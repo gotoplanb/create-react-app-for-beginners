@@ -2,12 +2,7 @@ import React from 'react';
 
 class AddFishForm extends React.Component {
 
-  constructor() {
-    super();
-    this.createFish = this.createFish.bind(this);
-  }
-
-  createFish(event) {
+  createFish = (event) => {
     event.preventDefault();
     console.log('You added a fish.');
     const fish = {
